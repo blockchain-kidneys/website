@@ -178,7 +178,7 @@ body {
 }
 
 #ajax-loading{
-	/*display: none;*/
+	display: none;
 	z-index: 1;
 	opacity: 0.6;
 	width: 100%;

@@ -11,7 +11,6 @@ $(".next").click(function(){
 	hasError = false;
 	
 	current_fs = $(this).parent();
-	inputs = current_fs.find('input').serializeArray();
 	next_fs = $(this).parent().next();
 
 	//Check if inputs are not empty
@@ -60,10 +59,14 @@ $(".submit").on('click', function(event){
 	var validate = true;
 	//Prevent default submit workflow
 	event.preventDefault();
+	//If checkbox is not checked show toastr
 	if(!$("#confirm").is(':checked')){
 		validate = false;
+		$(this).parent().removeClass('shake');
 		toastr.error('Please click on the checkbox.', 'Error!');
-		return false;
+		$(this).parent().addClass('shake');//shake the fieldset
+
+		return false;//stop flow
 	}
 
 	if(validate){
@@ -71,7 +74,7 @@ $(".submit").on('click', function(event){
 		toastr.clear();//Remove all toastrs
 		var values =$("#kidneyform").serializeArray();
 		$("#ajax-loading").show(); //show ajax loading image
-		//Hit the API
+		//Hit the etherium blockchain
 		/*var result = api(url, data, function(data){
 			//
 		});*/
