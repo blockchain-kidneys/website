@@ -65,8 +65,6 @@ $(".submit").on('click', function(event){
 		$(this).parent().removeClass('shake');
 		toastr.error('Please click on the checkbox.', 'Error!');
 		$(this).parent().addClass('shake');//shake the fieldset
-
-		return false;//stop flow
 	}
 
 	if(validate){
@@ -84,8 +82,6 @@ $(".submit").on('click', function(event){
 		next_fs = $(this).parent().next();
 		changePage(current_fs, true, false, next_fs);
 	}
-
-	//Show any error message
 });
 
 /**
