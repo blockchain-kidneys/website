@@ -3,13 +3,39 @@
 var current_fs, next_fs, previous_fs; //fieldsets
 var left, opacity, scale; //fieldset properties which we will animate
 var animating; //flag to prevent quick multi-click glitches
+var hasError = false; //flag to set if form is validated or not
 
 $(".next").click(function(){
 	if(animating) return false;
 	animating = true;
+	hasError = false;
 	
 	current_fs = $(this).parent();
+	inputs = current_fs.find('input').serializeArray();
 	next_fs = $(this).parent().next();
+
+	//Check if inputs are not empty
+	current_fs.find('input').each(function(index, value){
+		//Checking if value is empty
+		if($.trim($(value).val()) == ""){
+			hasError = true;
+			$(value).addClass('border-red'); //add border red to the empty element
+
+			//When the user start typing something remove border red
+			$(value).on('keypress', function(event){
+				if($.trim($(this).val()) != ""){
+					$(this).removeClass('border-red');
+				}
+			});
+		}
+	});
+
+	//If form has error shake the form and stop going to next page
+	if(hasError){
+		current_fs.addClass('shake');
+		animating = false;
+		return false;
+	}
 	
 	//activate next step on progressbar using the index of next_fs
 	$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
@@ -74,6 +100,17 @@ $(".previous").click(function(){
 	});
 });
 
-$(".submit").click(function(){
-	return false;
-})
+$(".submit").on('click', function(event){
+	//Prevent default submit workflow
+	event.preventDefault();
+	var values =$("#kidneyform").serializeArray(); //get all inputs in array, all inputs should be already validated
+
+	if(validation){
+		//Hit the API
+		var result = api(url, data, function(data){
+			//
+		});
+	}
+
+	//Show any error message
+});
