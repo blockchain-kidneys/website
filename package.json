@@ -1,0 +1,12 @@
+{
+  "name": "Kidner",
+  "namespace": "kidner",
+  "version": "0.15.1",
+  "description": "Find your kidney website",
+  "directories": {
+    "lib": "./js"
+  },
+  "dependencies": {
+    "web3.js": "ethereum/web3.js#master"
+  }
+}
