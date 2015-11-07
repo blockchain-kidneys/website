@@ -18,12 +18,14 @@ body {
 	font-family: montserrat, arial, verdana;
 }
 /*form styles*/
+
 #kidneyform {
 	width: 400px;
 	margin: 50px auto;
 	text-align: center;
 	position: relative;
 }
+
 #kidneyform fieldset {
 	background: white;
 	border: 0 none;
@@ -98,17 +100,20 @@ body {
 
 /*progressbar*/
 #progressbar {
-	margin-bottom: 30px;
+	width: 510px;
 	overflow: hidden;
 	/*CSS counters to number the steps*/
 	counter-reset: step;
+	margin: 50px auto;
+	text-align: center;
+	position: relative;
 }
 #progressbar li {
 	list-style-type: none;
 	color: white;
 	text-transform: uppercase;
 	font-size: 9px;
-	width: 33.33%;
+	width: 20%;
 	float: left;
 	position: relative;
 }

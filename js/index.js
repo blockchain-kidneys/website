@@ -32,7 +32,7 @@ $(".next").click(function(){
 
 	//If form has error shake the form and stop going to next page
 	if(hasError){
-		toastr.error('Please fill all the information.', 'Error!');
+		toastr.error('Please fill out every field.', 'Error!');
 		current_fs.addClass('shake');
 		animating = false;
 		return false;
@@ -107,7 +107,7 @@ $(".submit").on('click', function(event){
 	event.preventDefault();
 	if(!$("#confirm").is(':checked')){
 		validate = false;
-		toastr.error('Please, click on the checkbox.', 'Error!');
+		toastr.error('Please click on the checkbox.', 'Error!');
 		return false;
 	}
 

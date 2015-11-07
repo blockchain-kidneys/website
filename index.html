@@ -12,14 +12,17 @@
 
   <body>
 
+  <ul id="progressbar">
+    <li class="active">Donor Information</li>
+    <li>Recipient Information</li>
+    <li>Donor Verification</li>
+    <li>Recipient Verification</li>
+    <li>Doctor Verification</li>
+  </ul>
     <!-- multistep form -->
 <form id="kidneyform">
   <!-- progressbar -->
-  <ul id="progressbar">
-    <li class="active">Donor</li>
-    <li>Recipient</li>
-    <li>Confirmation</li>
-  </ul>
+  
   <!-- fieldsets -->
   <fieldset>
     <h2 class="fs-title">Donor Information</h2>
@@ -43,6 +46,43 @@
     <input type="button" name="previous" class="previous action-button" value="Previous" />
     <input type="button" name="next" class="next action-button" value="Next" />
   </fieldset>
+  
+  <fieldset>
+    <h2 class="fs-title">Donor Verification</h2>
+    <h3 class="fs-subtitle">Step 1</br></br>To be entered by kidney donor only</br></h3>
+    <input type="text" name="donorfirst" placeholder="First Name" />
+    <input type="text" name="donorlast" placeholder="Last Name" />
+    <input type="text" name="donorpublic" placeholder="Public Key" />
+    <input type="password" name="donorprivate" placeholder="Private Key" />
+    <input type="password" name="donorprivatecon" placeholder="Confirm Private Key" />
+    <input type="button" name="previous" class="previous action-button" value="Previous" />
+    <input type="button" name="next" class="next action-button" value="Next" />
+  </fieldset>
+
+  <fieldset>
+    <h2 class="fs-title">Recipient Verification</h2>
+    <h3 class="fs-subtitle">Step 2</br></br>To be entered by kidney recipient only</br></h3>
+    <input type="text" name="recipfirst" placeholder="First Name" />
+    <input type="text" name="reciplast" placeholder="Last Name" />
+    <input type="text" name="recippublic" placeholder="Public Key" />
+    <input type="password" name="recipprivate" placeholder="Private Key" />
+    <input type="password" name="recipprivatecon" placeholder="Confirm Private Key" />
+    <input type="button" name="previous" class="previous action-button" value="Previous" />
+    <input type="button" name="next" class="next action-button" value="Next" />
+  </fieldset>
+  
+  <fieldset>
+    <h2 class="fs-title">Doctor Verification</h2>
+    <h3 class="fs-subtitle">Step 3</br></br>To be entered by doctor only</h3></br>
+    <input type="text" name="doctorfirst" placeholder="First Name" />
+    <input type="text" name="doctorlast" placeholder="Last Name" />
+    <input type="text" name="doctorpublic" placeholder="Public Key" />
+    <input type="password" name="doctorprivate" placeholder="Private Key" />
+    <input type="password" name="doctorprivatecon" placeholder="Confirm Private Key" />
+    <input type="button" name="previous" class="previous action-button" value="Previous" />
+    <input type="button" name="next" class="next action-button" value="Next" />
+  </fieldset>
+
   <fieldset>
     <h2 class="fs-title">Confirm</h2>
     <h3 class="fs-subtitle">Step 3</h3></br>
