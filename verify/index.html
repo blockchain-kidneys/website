@@ -18,6 +18,7 @@
     <li>Donor Verification</li>
     <li>Recipient Verification</li>
     <li>Doctor Verification</li>
+    <li>Confirmation</li>
   </ul>
     <!-- multistep form -->
 <form id="kidneyform">
@@ -84,12 +85,21 @@
   </fieldset>
 
   <fieldset>
-    <h2 class="fs-title">Confirming</h2>
+    <h2 class="fs-title">Confirm</h2>
+    <h3 class="fs-subtitle">Step 6</h3></br>
+    <h1 class="fs-confirm">By clicking this checkbox, I confirm that all the information entered is accurate and correct.</h1>
+    <div class="center">
+      <input type="checkbox" id="confirm" name="confirm" value="Confirmation">
+    </div>
     <input type="button" name="previous" class="previous action-button" value="Previous" />
     <input type="submit" name="submit" class="submit action-button" value="Submit" />
     <div id="ajax-loading">
         <img src="../images/loader.gif" width="250" heigth="258">
     </div>
+  </fieldset>
+  <fieldset>
+    <h2 class="fs-title">Confirmation</h2>
+    <h1 class="fs-confirm">Thanks for submitting you form!</h1>
   </fieldset>
 </form>
 
