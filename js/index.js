@@ -22,7 +22,7 @@ $(".next").click(function(){
 			$(value).addClass('border-red'); //add border red to the empty element
 
 			//When the user start typing something remove border red
-			$(value).on('keypress', function(event){
+			$(value).on('keyup', function(event){
 				if($.trim($(this).val()) != ""){
 					$(this).removeClass('border-red');
 				}
@@ -32,6 +32,7 @@ $(".next").click(function(){
 
 	//If form has error shake the form and stop going to next page
 	if(hasError){
+		toastr.error('Please fill all the information.', 'Error!');
 		current_fs.addClass('shake');
 		animating = false;
 		return false;
@@ -101,15 +102,24 @@ $(".previous").click(function(){
 });
 
 $(".submit").on('click', function(event){
+	var validate = true;
 	//Prevent default submit workflow
 	event.preventDefault();
-	var values =$("#kidneyform").serializeArray(); //get all inputs in array, all inputs should be already validated
+	if(!$("#confirm").is(':checked')){
+		validate = false;
+		toastr.error('Please, click on the checkbox.', 'Error!');
+		return false;
+	}
 
-	if(validation){
+	if(validate){
+		//Get all inputs in array, all inputs should be already validated
+		toastr.clear();//Remove all toastrs
+		var values =$("#kidneyform").serializeArray();
+		$("#ajax-loading").show(); //show ajax loading image
 		//Hit the API
-		var result = api(url, data, function(data){
+		/*var result = api(url, data, function(data){
 			//
-		});
+		});*/
 	}
 
 	//Show any error message

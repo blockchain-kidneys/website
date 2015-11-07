@@ -171,3 +171,19 @@ body {
 	-webkit-animation-iteration-count: 1;
 	-webkit-animation-timing-function: linear;
 }
+
+#ajax-loading{
+	display: none;
+	z-index: 1;
+	opacity: 0.6;
+	width: 100%;
+	height: 268px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: black;
+}
+
+#ajax-loading img{
+	z-index: 2;
+}
