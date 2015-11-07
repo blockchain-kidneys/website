@@ -82,6 +82,20 @@ body {
 	color: #666;
 	margin-bottom: 20px;
 }
+.fs-confirm {
+	font-weight: normal;
+	font-size: 13px;
+	color: #2C3E50;
+	margin-bottom: 20px;
+}
+.center {
+    margin: auto;
+    width: 5%;
+    border:3px solid #27AE60;
+    padding: 5px;
+ 
+}
+
 /*progressbar*/
 #progressbar {
 	margin-bottom: 30px;

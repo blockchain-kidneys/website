@@ -2,7 +2,7 @@
 <html >
   <head>
     <meta charset="UTF-8">
-    <title>Multi Step Form with Progress Bar using jQuery and CSS3</title>
+    <title>Register Kidney Information</title>
     
     
     <link rel="stylesheet" href="css/reset.css">
@@ -27,7 +27,7 @@
   </ul>
   <!-- fieldsets -->
   <fieldset>
-    <h2 class="fs-title">Register Donor Information</h2>
+    <h2 class="fs-title">Donor Information</h2>
     <h3 class="fs-subtitle">Step 1</h3>
     <input type="text" name="donorname" placeholder="Donor Name" />
     <input type="text" name="donorblood" placeholder="Blood Type" />
@@ -38,7 +38,7 @@
   </fieldset>
 
   <fieldset>
-    <h2 class="fs-title">Register Recipient Information</h2>
+    <h2 class="fs-title">Recipient Information</h2>
     <h3 class="fs-subtitle">Step 2</h3>
     <input type="text" name="recipname" placeholder="Recipient Name" />
     <input type="text" name="recipblood" placeholder="Blood Type" />
@@ -49,12 +49,12 @@
     <input type="button" name="next" class="next action-button" value="Next" />
   </fieldset>
   <fieldset>
-    <h2 class="fs-title">Personal Details</h2>
-    <h3 class="fs-subtitle">We will never sell it</h3>
-    <input type="text" name="fname" placeholder="First Name" />
-    <input type="text" name="lname" placeholder="Last Name" />
-    <input type="text" name="phone" placeholder="Phone" />
-    <textarea name="address" placeholder="Address"></textarea>
+    <h2 class="fs-title">Confirm</h2>
+    <h3 class="fs-subtitle">Step 3</h3></br>
+    <h1 class="fs-confirm">By clicking this checkbox, I confirm that all the information entered is accurate and correct.</h1>
+    <div class="center">
+      <input type="checkbox" name="confirm" value="Confirmation">
+    </div>
     <input type="button" name="previous" class="previous action-button" value="Previous" />
     <input type="submit" name="submit" class="submit action-button" value="Submit" />
   </fieldset>
