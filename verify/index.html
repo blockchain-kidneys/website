@@ -104,7 +104,7 @@
     <h1 class="fs-confirm">Thanks for submitting your form!</h1>
     <h1 class="fs-confirm">A certificate has been created.</h1>
     <h1 class="fs-confirm">Address: 0x86d2034f920587477801234b59fd2743ec56f52f</h1>
-    <input type="button" name="search" class="next action-button" onclick="window.location='/website/search.html'" value="Find match" />
+    <input type="button" name="search" class="next action-button" onclick="window.location='/verify/search.html'" value="Find match" />
   </fieldset>
 </form>
 
@@ -190,9 +190,9 @@
                         type: "constructor"
                     }];
 
-                    var greeter = web3.eth.contract(ABI).at('0xc0aec8daef6ed73b957993fad471e75779e63e15');
-                    console.log(greeter.greet());
-                    console.log(web3.eth.getCode('0xc0aec8daef6ed73b957993fad471e75779e63e15'));
+                    //var greeter = web3.eth.contract(ABI).at('0xc0aec8daef6ed73b957993fad471e75779e63e15');
+                    //console.log(greeter.greet());
+                    //console.log(web3.eth.getCode('0xc0aec8daef6ed73b957993fad471e75779e63e15'));
             });
         </script>
   </body>
