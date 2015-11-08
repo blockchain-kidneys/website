@@ -71,6 +71,59 @@ body {
 #kidneyform .action-button:hover, #kidneyform .action-button:focus {
 	box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
 }
+
+#kidneyformbig {
+	width: 800px;
+	margin: 50px auto;
+	text-align: center;
+	position: relative;
+}
+
+#kidneyformbig fieldset {
+	background: white;
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 30px;
+	
+	box-sizing: border-box;
+	width: 80%;
+	margin: 0 10%;
+	
+	/*stacking fieldsets above each other*/
+	position: absolute;
+}
+/*Hide all except first fieldset*/
+#kidneyformbig fieldset:not(:first-of-type) {
+	display: none;
+}
+/*inputs*/
+#kidneyformbig input, #kidneyform textarea {
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	font-family: montserrat;
+	color: #2C3E50;
+	font-size: 13px;
+}
+/*buttons*/
+#kidneyformbig .action-button {
+	width: 100px;
+	background: #27AE60;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 10px 5px;
+}
+#kidneyformbig .action-button:hover, #kidneyform .action-button:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
 /*headings*/
 .fs-title {
 	font-size: 15px;
@@ -117,6 +170,7 @@ body {
 	float: left;
 	position: relative;
 }
+
 #progressbar li:before {
 	content: counter(step);
 	counter-increment: step;
@@ -147,6 +201,59 @@ body {
 /*marking active/completed steps green*/
 /*The number of the step and the connector before it = green*/
 #progressbar li.active:before,  #progressbar li.active:after{
+	background: #27AE60;
+	color: white;
+}
+/*progressbar*/
+#progressbarbig {
+	width: 510px;
+	overflow: hidden;
+	/*CSS counters to number the steps*/
+	counter-reset: step;
+	margin: 50px auto;
+	text-align: center;
+	position: relative;
+}
+#progressbarbig li {
+	list-style-type: none;
+	color: white;
+	text-transform: uppercase;
+	font-size: 9px;
+	width: 50%;
+	float: left;
+	position: relative;
+}
+
+#progressbarbig li:before {
+	content: counter(step);
+	counter-increment: step;
+	width: 20px;
+	line-height: 20px;
+	display: block;
+	font-size: 10px;
+	color: #333;
+	background: white;
+	border-radius: 3px;
+	margin: 0 auto 5px auto;
+}
+/*progressbar connectors*/
+#progressbarbig li:after {
+	content: '';
+	width: 100%;
+	height: 2px;
+	background: white;
+	position: absolute;
+	left: -50%;
+	top: 9px;
+	z-index: -1; /*put it behind the numbers*/
+}
+#progressbarbig li:first-child:after {
+	/*connector not needed before the first step*/
+	content: none; 
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbarbig li.active:before,  #progressbar li.active:after{
 	background: #27AE60;
 	color: white;
 }
@@ -192,3 +299,92 @@ body {
 #ajax-loading img{
 	z-index: 2;
 }
+
+
+
+
+
+
+
+
+
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  color: #4a4a4d;
+  font: 14px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+table.centertable {
+    margin-left:auto; 
+    margin-right:auto;
+  }
+th,
+td {
+  padding: 10px 15px;
+  vertical-align: middle;
+}
+thead {
+  background: #395870;
+  background: -webkit-linear-gradient(#49708f, #293f50);
+  background: linear-gradient(#49708f, #293f50);
+  color: #fff;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+th:first-child {
+  border-top-left-radius: 5px;
+  text-align: left;
+}
+th:last-child {
+  border-top-right-radius: 5px;
+}
+tbody tr:nth-child(even) {
+  background: #f0f0f2;
+  text-align: left;
+}
+tbody tr:nth-child(odd) {
+  background: #ffffff;
+  text-align: left;
+}
+td {
+  border-bottom: 1px solid #cecfd5;
+  border-right: 1px solid #cecfd5;
+}
+td:first-child {
+  border-left: 1px solid #cecfd5;
+}
+.certificate {
+  color: #395870;
+  display: block;
+  font-size: 12px;
+}
+.hospital {
+  color: #7c7c80;
+  font-size: 12px;
+}
+.location {
+  text-align: center;
+  color: #395870;
+  font-size: 12px;
+}
+.contact {
+  text-align: center;
+  color: #395870;
+  font-size: 12px;
+}
+
+tfoot {
+  text-align: right;
+}
+tfoot tr:last-child {
+  background: #f0f0f2;
+  color: #395870;
+  font-weight: bold;
+}
+tfoot tr:last-child td:first-child {
+  border-bottom-left-radius: 5px;
+}
+tfoot tr:last-child td:last-child {
+  border-bottom-right-radius: 5px;
+} 
