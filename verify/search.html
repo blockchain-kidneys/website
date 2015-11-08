@@ -12,26 +12,45 @@
 
   <body>
 
-  <ul id="progressbar">
+  <ul id="progressbarbig">
     <li class="active">Find a match</li>
     <li>Search results</li>
   </ul>
     <!-- multistep form -->
-<form id="kidneyform">
+<form id="kidneyformbig">
   <!-- progressbar -->
   
   <!-- fieldsets -->
   <fieldset>
     <h2 class="fs-title">Find a match</h2>
     <h3 class="fs-subtitle">Step 1</h3>
-    <input type="text" name="address" placeholder="Address: 0x00000000000000001" />
+    <input type="text" name="address" placeholder="Address: 0x0000000000000000000000000000000000000000" />
     <input type="button" name="find" class="next action-button" value="Find" />
   </fieldset>
 
   <fieldset>
     <h2 class="fs-title">Search results</h2>
     <h3 class="fs-subtitle">Step 2</h3>
-    <div>Results</div>
+    <div>Results</br></br></br></div>
+    <table class="centertable">
+  <thead>
+    <tr>
+      <th scope="col">Certificate</th>
+      <th scope="col">Location</th>
+      <th scope="col">Contact</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <strong class="certificate">0x86d2034f920587477801234b59fd2743ec56f52f</strong>
+        <span class="hospital">St Vincent's University Hospital</span>
+      </td>
+      <td class="location">Dublin, Ireland</td>
+      <td class="contact">doctor@stvincents.ie</td>
+    </tr>
+  </tbody>
+</table>
   </fieldset>
   
 </form>
