@@ -81,6 +81,7 @@ $(".submit").on('click', function(event){
 		current_fs = $(this).parent();
 		next_fs = $(this).parent().next();
 		changePage(current_fs, true, false, next_fs);
+		next_fs.css('width', '100%');
 	}
 });
 
