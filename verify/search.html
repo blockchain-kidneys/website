@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Register Kidney Information</title>
+    <link rel="shortcut icon" href="../images/favicon.png">
+    
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+  </head>
+
+  <body>
+
+  <ul id="progressbar">
+    <li class="active">Find a match</li>
+    <li>Search results</li>
+  </ul>
+    <!-- multistep form -->
+<form id="kidneyform">
+  <!-- progressbar -->
+  
+  <!-- fieldsets -->
+  <fieldset>
+    <h2 class="fs-title">Find a match</h2>
+    <h3 class="fs-subtitle">Step 1</h3>
+    <input type="text" name="address" placeholder="Address: 0x00000000000000001" />
+    <input type="button" name="find" class="next action-button" value="Find" />
+  </fieldset>
+
+  <fieldset>
+    <h2 class="fs-title">Search results</h2>
+    <h3 class="fs-subtitle">Step 2</h3>
+    <div>Results</div>
+  </fieldset>
+  
+</form>
+
+        <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+        <script src='http://thecodeplayer.com/uploads/js/jquery.easing.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js'></script>
+        <script src="../js/index.js"></script>
+  </body>
+</html>
