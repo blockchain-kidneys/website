@@ -11,7 +11,7 @@
 		font-family: 'Source Sans Pro', sans-serif;
 		font-size: 12pt;
 		font-weight: 400;
-		color: #4E4D4D;
+		color: #FFF;
 	}
 	
 	
@@ -43,7 +43,7 @@
 	
 	a
 	{
-		color: #383838;
+		color: #FFF;
 	}
 	
 	a:hover
@@ -190,8 +190,13 @@
 		letter-spacing: 0.10em;
 		text-transform: uppercase;
 		font-weight: 700;
-		color: #3f3f3f;
+		color: #FFF;
 	}
+
+
+
+	#featured-wrapper .title h2 	{ color: #3f3f3f;}
+	#featured-wrapper .byline {color: #191919;}
 
 	.title .byline
 	{
@@ -328,7 +333,8 @@
 
 	#page-wrapper
 	{
-		background: #EEEEEE;
+		    background: linear-gradient(rgba(196, 102, 0, 0.2), rgba(155, 89, 182, 0.2)), url('http://thecodeplayer.com/uploads/media/gs.png');
+
 	}
 
 	#page
