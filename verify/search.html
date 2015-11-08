@@ -14,7 +14,7 @@
 
   <ul id="progressbar">
     <li class="active">Find a match</li>
-    <li>Confirmation</li>
+    <li>Search results</li>
   </ul>
     <!-- multistep form -->
 <form id="kidneyform">
@@ -29,16 +29,9 @@
   </fieldset>
 
   <fieldset>
-    <h2 class="fs-title">Recipient Information</h2>
+    <h2 class="fs-title">Search results</h2>
     <h3 class="fs-subtitle">Step 2</h3>
-    <input type="text" name="recipname" placeholder="Recipient Name" />
-    <input type="date" id="recipdob" name="recipdob" placeholder="Date of birth: 01-01-1975" />
-    <input type="text" name="recipblood" placeholder="Blood Type" />
-    <input type="text" name="recipant" placeholder="Antigens" />
-    <input type="text" name="reciphospital" placeholder="Hospital Location" />
-    <input type="text" name="recipnotes" placeholder="Notes" />
-    <input type="button" name="previous" class="previous action-button" value="Previous" />
-    <input type="button" name="next" class="next action-button" value="Next" />
+    <div>Results</div>
   </fieldset>
   
 </form>
@@ -47,88 +40,5 @@
         <script src='http://thecodeplayer.com/uploads/js/jquery.easing.min.js'></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js'></script>
         <script src="../js/index.js"></script>
-        <script src="../node_modules/web3/dist/web3.min.js"></script>
-        <script>
-            function ageCategoryString(birthYear){
-                if(birthYear < 1980) {
-
-                    var matchNumber = 786245;
-
-                } else if(birthYear >= 1980 && birthYear <= 1985){
-
-                    var matchNumber = 1793400;
-
-                } else if(birthYear >= 1986 && birthYear <= 1990){
-
-                    var matchNumber = 927639;
-
-                } else if(birthYear >= 1991 && birthYear <= 1995){
-
-                    var matchNumber = 2763649;
-
-                } else if(birthYear >= 1996 && birthYear <= 2000){
-
-                    var matchNumber = 5971018;
-
-                } else{
-
-                    var matchNumber = 1873642;
-
-                }
-
-                matchNumber = Number(birthYear) + Number(matchNumber);
-
-                return matchNumber;
-            }
-
-            $('#donordob').change(function(){
-                var dob = $('#donordob').val();
-                var dateElements = dob.split("-");
-                var year = dateElements[0];
-                console.log(ageCategoryString(year));
-            });
-
-            $('#recipdob').change(function(){
-                var dob = $('#recipdob').val();
-                var dateElements = dob.split("-");
-                var year = dateElements[0];
-                console.log(ageCategoryString(year));
-            });
-
-            $(document).ready(function(){
-
-                    var web3 = new Web3();
-                    //This will only work if server its running geth --rpc --rpccorsdomain "*" --rpcaddr "ip"
-                    if(!web3.currentProvider){
-                        web3.setProvider(new web3.providers.HttpProvider('http://159.122.225.44:8545'));
-                    }
-                    var ABI = [{
-                        constant: false,
-                        inputs: [],
-                        name: "kill",
-                        outputs: [],
-                        type: "function"
-                    }, {
-                        constant: true,
-                        inputs: [],
-                        name: "greet",
-                        outputs: [{
-                            name: "",
-                            type: "string"
-                        }],
-                        type: "function"
-                    }, {
-                        inputs: [{
-                            name: "_greeting",
-                            type: "string"
-                        }],
-                        type: "constructor"
-                    }];
-
-                    var greeter = web3.eth.contract(ABI).at('0xc0aec8daef6ed73b957993fad471e75779e63e15');
-                    console.log(greeter.greet());
-                    console.log(web3.eth.getCode('0xc0aec8daef6ed73b957993fad471e75779e63e15'));
-            });
-        </script>
   </body>
 </html>
